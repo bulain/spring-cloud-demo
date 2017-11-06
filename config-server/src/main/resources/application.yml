@@ -7,4 +7,4 @@ spring:
     config:
       server:
         git: 
-          uri: file://${user.home}/config-repo
+          uri: https://github.com/bulain/cloud-config-repo.git
