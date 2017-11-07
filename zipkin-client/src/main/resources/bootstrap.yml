@@ -3,13 +3,12 @@ server:
 spring:
   application:
     name: zipkin-client
+  zipkin:
+    base-url: http://localhost:8773
   cloud:
     discovery:
       enabled: true
       serviceId: config-server
-  zipkin:
-    base-url: http://localhost:8773
-
 eureka:
   client:
     serviceUrl:
