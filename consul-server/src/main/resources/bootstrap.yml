@@ -2,7 +2,7 @@ server:
   port: 7777
 spring:
   application:
-    name: eureka-server
+    name: consul-server
   cloud:
     consul:
       host: localhost
