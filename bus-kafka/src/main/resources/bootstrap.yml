@@ -1,10 +1,17 @@
 spring:
   application:
-    name: zuul-service
+    name: bus-kafka
   cloud:
     discovery:
       enabled: true
       serviceId: config-server
+    stream:
+       kafka:
+         binder:
+           brokers: localhost
+           defaultBrokerPort: 9092
+           zkNodes: localhost
+           defaultZkPort: 2181
 eureka:
   client:
     serviceUrl:
