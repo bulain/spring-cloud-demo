@@ -3,6 +3,9 @@ spring:
     name: zipkin-client
   zipkin:
     base-url: http://localhost:8773
+  sleuth:
+    sampler:
+      percentage: 1.0
   cloud:
     discovery:
       enabled: true
