@@ -8,7 +8,7 @@ services:
   eureka-service:
     image: bulain/eureka-service
     restart: always
-    ports:
-      - 8762:8762
+    expose:
+      - 8762
     links:
-     - eureka-server
+      - eureka-server
