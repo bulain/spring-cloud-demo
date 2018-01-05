@@ -5,6 +5,14 @@ spring:
     discovery:
       enabled: true
       serviceId: config-server
+    stream:
+      bindings:
+        input:
+          destination: cloud.topic
+          group: queue
+        output:
+          destination: cloud.topic
+          contentType: text/plain
   rabbitmq:
     host: localhost
     port: 5672
