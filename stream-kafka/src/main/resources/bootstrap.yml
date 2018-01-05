@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: stream-kafka
+  cloud:
+    discovery:
+      enabled: true
+      serviceId: config-server
+    stream:
+       kafka:
+         binder:
+           brokers: localhost
+           defaultBrokerPort: 9092
+           zkNodes: localhost
+           defaultZkPort: 2181
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
