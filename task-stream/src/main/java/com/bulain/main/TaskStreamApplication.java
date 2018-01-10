@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Bean;
 
 @EnableTask
 @SpringBootApplication
-public class TaskClientApplication {
+public class TaskStreamApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskClientApplication.class, args);
+		SpringApplication.run(TaskStreamApplication.class, args);
 	}
 
 	@Bean

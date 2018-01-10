@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: task-stream
+  cloud:
+    discovery:
+      enabled: true
+      serviceId: task-stream
+    

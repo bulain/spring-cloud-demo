@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: task-runner
+  cloud:
+    discovery:
+      enabled: true
+      serviceId: task-runner
+    
