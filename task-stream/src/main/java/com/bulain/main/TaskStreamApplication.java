@@ -1,14 +1,23 @@
 package com.bulain.main;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.CommandLineRunner;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.task.configuration.EnableTask;
-import org.springframework.context.annotation.Bean;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.cloud.task.launcher.TaskLaunchRequest;
+import org.springframework.cloud.task.launcher.annotation.EnableTaskLauncher;
+import org.springframework.messaging.support.GenericMessage;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@EnableTask
+@EnableBinding(Source.class)
+@RestController
+@EnableTaskLauncher
 @SpringBootApplication
 public class TaskStreamApplication {
 
@@ -16,18 +25,16 @@ public class TaskStreamApplication {
 		SpringApplication.run(TaskStreamApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner() {
-		return new DemoCommandLineRunner();
+	@Autowired
+	private Source source;
+
+	@RequestMapping(path = "/launcher", method = RequestMethod.GET)
+	public void publishTask() {
+		String uri = "maven://com.bulain:task-runner:jar:1.0.0-SNAPSHOT";
+		List<String> commandArgsList = new ArrayList<>();
+		TaskLaunchRequest request = new TaskLaunchRequest(uri, commandArgsList,
+				null, null, "task-runner");
+		source.output().send(new GenericMessage<TaskLaunchRequest>(request));
 	}
 
-	public static class DemoCommandLineRunner implements CommandLineRunner {
-		private Logger logger = LoggerFactory.getLogger(getClass());
-
-		@Override
-		public void run(String... strings) throws Exception {
-			logger.info("this is a Test about spring cloud task.");
-		}
-		
-	}
 }
