@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: task-batch
+  cloud:
+    discovery:
+      enabled: true
+      serviceId: task-batch
+maven:
+  localRepository: C:/home/.m2/repository
+  
