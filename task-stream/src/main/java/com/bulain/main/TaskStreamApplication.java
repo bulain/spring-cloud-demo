@@ -1,7 +1,9 @@
 package com.bulain.main;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -31,9 +33,11 @@ public class TaskStreamApplication {
 	@RequestMapping(path = "/launcher", method = RequestMethod.GET)
 	public void publishTask() {
 		String uri = "maven://com.bulain:task-runner:jar:1.0.0-SNAPSHOT";
-		List<String> commandArgsList = new ArrayList<>();
+		List<String> commandArgsList = new ArrayList<String>();
+		Map<String, String> environmentProperties = new HashMap<String, String>();
+		Map<String, String> deploymentProperties = new HashMap<String, String>();
 		TaskLaunchRequest request = new TaskLaunchRequest(uri, commandArgsList,
-				null, null, "task-runner");
+				environmentProperties, deploymentProperties, "task-runner");
 		source.output().send(new GenericMessage<TaskLaunchRequest>(request));
 	}
 
