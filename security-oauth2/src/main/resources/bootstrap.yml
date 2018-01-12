@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: security-oauth2
+  cloud:
+    discovery:
+      enabled: true
+      serviceId: config-server
+management:
+  security:
+    enabled: false
