@@ -30,14 +30,25 @@ public class TaskStreamApplication {
 	@Autowired
 	private Source source;
 
-	@RequestMapping(path = "/launcher", method = RequestMethod.GET)
-	public void publishTask() {
+	@RequestMapping(path = "/runner", method = RequestMethod.GET)
+	public void runner() {
 		String uri = "maven://com.bulain:task-runner:jar:1.0.0-SNAPSHOT";
 		List<String> commandArgsList = new ArrayList<String>();
 		Map<String, String> environmentProperties = new HashMap<String, String>();
 		Map<String, String> deploymentProperties = new HashMap<String, String>();
 		TaskLaunchRequest request = new TaskLaunchRequest(uri, commandArgsList,
 				environmentProperties, deploymentProperties, "task-runner");
+		source.output().send(new GenericMessage<TaskLaunchRequest>(request));
+	}
+	
+	@RequestMapping(path = "/batch", method = RequestMethod.GET)
+	public void batch() {
+		String uri = "maven://com.bulain:task-batch:jar:1.0.0-SNAPSHOT";
+		List<String> commandArgsList = new ArrayList<String>();
+		Map<String, String> environmentProperties = new HashMap<String, String>();
+		Map<String, String> deploymentProperties = new HashMap<String, String>();
+		TaskLaunchRequest request = new TaskLaunchRequest(uri, commandArgsList,
+				environmentProperties, deploymentProperties, "task-batch");
 		source.output().send(new GenericMessage<TaskLaunchRequest>(request));
 	}
 
