@@ -8,3 +8,12 @@ spring:
 management:
   security:
     enabled: false
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8778/oauth/token
+      user-authorization-uri: http://localhost:8778/oauth/authorize
+      client-id: 70d7c0424190ec81726664d1dd93cfe5
+    resource:
+      user-info-uri: http://localhost:8778/user
+      prefer-token-info: false
