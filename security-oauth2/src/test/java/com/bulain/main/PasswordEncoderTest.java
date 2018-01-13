@@ -13,7 +13,6 @@ public class PasswordEncoderTest {
         System.out.println(passwordEncoder.encode("admin"));
         System.out.println(passwordEncoder.encode("user"));
         System.out.println(passwordEncoder.encode("guest"));
-        System.out.println(passwordEncoder.encode("91ee593b1c46b22874e11ac12278d2f4528d7594"));
     }
     
 }
