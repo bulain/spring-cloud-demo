@@ -30,4 +30,5 @@ public class Oauth2ResourceInit extends ResourceServerConfigurerAdapter {
         http.csrf().disable().exceptionHandling().authenticationEntryPoint(authenticationEntryPoint).and()
                 .authorizeRequests().anyRequest().authenticated().and().httpBasic();
     }
+    
 }
