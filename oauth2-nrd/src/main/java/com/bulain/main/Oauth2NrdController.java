@@ -7,21 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Oauth2ClientController {
+public class Oauth2NrdController {
 
     @RequestMapping("/user")
     public Principal user(Principal user) {
         return user;
     }
 
-    @GetMapping("/client")
-    public String client() {
-        return "OK";
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "welcome";
     }
 
     @GetMapping("/anon")
     public String anon() {
         return "anon";
     }
-
+    
 }

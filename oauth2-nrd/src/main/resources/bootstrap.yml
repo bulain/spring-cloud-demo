@@ -1,0 +1,24 @@
+server:
+  port: 8780
+spring:
+  application:
+    name: oauth2-nrd
+management:
+  security:
+    enabled: false
+security:
+  ignored: /
+  sessions: never
+  oauth2:
+    sso:
+      loginPath: /login
+    client:
+      clientId: f9d7195d810f1a91c003
+      clientSecret: 5da7d074396e87ab214eade09d5c867401c96d90
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      accessTokenUri: https://github.com/login/oauth/access_token
+    resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
+
+logging.level.org.springframework.web: DEBUG
