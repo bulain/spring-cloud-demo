@@ -18,7 +18,7 @@ security:
       userAuthorizationUri: http://localhost:8778/oauth/authorize
       accessTokenUri: http://localhost:8778/oauth/access_token
     resource:
-      userInfoUri: http://localhost:8778/oauth/user
+      userInfoUri: http://localhost:8778/user
       preferTokenInfo: false
 
 logging.level.org.springframework.web: DEBUG
