@@ -13,7 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 @Configuration
-public class Oauth2SecurityInit extends WebSecurityConfigurerAdapter {
+public class Oauth2AuthzSecurityInit extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

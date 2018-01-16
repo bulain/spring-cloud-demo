@@ -1,5 +1,7 @@
 package com.bulain.main;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,22 +12,28 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 import org.springframework.security.oauth2.provider.authentication.BearerTokenExtractor;
 import org.springframework.security.oauth2.provider.authentication.TokenExtractor;
 import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 @EnableResourceServer
 @Configuration
 public class Oauth2ResourceInit extends ResourceServerConfigurerAdapter {
 
     @Autowired
-    private TokenStore tokenStore;
+    private DataSource dataSource;
 
     @Bean
-    public TokenExtractor tokenExtractor(){
+    public TokenStore tokenStore() {
+        return new JdbcTokenStore(dataSource);
+    }
+
+    @Bean
+    public TokenExtractor tokenExtractor() {
         return new BearerTokenExtractor();
-    } 
-    
+    }
+
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.tokenStore(tokenStore).tokenExtractor(tokenExtractor());
+        resources.tokenStore(tokenStore()).tokenExtractor(tokenExtractor()).resourceId("b0adf4baa36c00c4");
     }
 
     @Override

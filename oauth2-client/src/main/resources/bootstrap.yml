@@ -16,9 +16,9 @@ security:
       clientId: 70d7c0424190ec81726664d1dd93cfe5
       clientSecret: 91ee593b1c46b22874e11ac12278d2f4528d7594
       userAuthorizationUri: http://localhost:8778/oauth/authorize
-      accessTokenUri: http://localhost:8778/oauth/access_token
+      accessTokenUri: http://localhost:8778/oauth/token
     resource:
-      userInfoUri: http://localhost:8778/user
+      userInfoUri: http://localhost:8781/api/user
       preferTokenInfo: false
 
 logging.level.org.springframework.web: DEBUG

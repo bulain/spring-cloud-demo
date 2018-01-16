@@ -1,11 +1,8 @@
 server:
-  port: 8778
-  session:
-    cookie:
-      name: OSESSIONID
+  port: 8781
 spring:
   application:
-    name: oauth2-server
+    name: oauth2-resource
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/oauth2_development
@@ -14,6 +11,7 @@ spring:
 management:
   security:
     enabled: false
-    
+
 logging.level.org.springframework.web: DEBUG
 logging.level.org.springframework.security: DEBUG
+    

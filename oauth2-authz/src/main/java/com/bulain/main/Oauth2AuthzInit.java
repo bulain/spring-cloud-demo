@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 @EnableAuthorizationServer
 @Configuration
-public class Oauth2AuthorizationInit extends AuthorizationServerConfigurerAdapter {
+public class Oauth2AuthzInit extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
