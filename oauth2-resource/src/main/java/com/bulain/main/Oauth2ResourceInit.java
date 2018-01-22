@@ -26,7 +26,9 @@ public class Oauth2ResourceInit extends ResourceServerConfigurerAdapter {
 
     @Bean
     public TokenStore tokenStore() {
-        return new RedisTokenStore(connectionFactory);
+        RedisTokenStore redisTokenStore = new RedisTokenStore(connectionFactory);
+        redisTokenStore.setPrefix("/tokenStore/");
+        return redisTokenStore;
     }
 
     @Bean

@@ -38,7 +38,9 @@ public class Oauth2AuthzInit extends AuthorizationServerConfigurerAdapter {
 
     @Bean
     public TokenStore tokenStore() {
-        return new RedisTokenStore(connectionFactory);
+        RedisTokenStore redisTokenStore = new RedisTokenStore(connectionFactory);
+        redisTokenStore.setPrefix("/tokenStore/");
+        return redisTokenStore;
     }
 
     @Override
