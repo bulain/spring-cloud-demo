@@ -14,9 +14,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
-import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
+
+import com.bulain.oauth.RedisAuthorizationCodeServices;
 
 @EnableAuthorizationServer
 @Configuration
@@ -33,13 +34,15 @@ public class Oauth2AuthzInit extends AuthorizationServerConfigurerAdapter {
 
     @Bean
     public AuthorizationCodeServices authorizationCodeServices() {
-        return new JdbcAuthorizationCodeServices(dataSource);
+        RedisAuthorizationCodeServices redisAuthCodeServices = new RedisAuthorizationCodeServices(connectionFactory);
+        redisAuthCodeServices.setPrefix("/oauth/");
+        return redisAuthCodeServices;
     }
 
     @Bean
     public TokenStore tokenStore() {
         RedisTokenStore redisTokenStore = new RedisTokenStore(connectionFactory);
-        redisTokenStore.setPrefix("/tokenStore/");
+        redisTokenStore.setPrefix("/oauth/");
         return redisTokenStore;
     }
 
