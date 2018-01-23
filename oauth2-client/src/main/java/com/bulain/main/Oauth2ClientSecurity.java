@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 public class Oauth2ClientSecurity extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.antMatcher("/**")
+        http
         // 所有请求都得经过认证和授权
         .authorizeRequests().anyRequest().authenticated()
         // 无需认证
-        .and().authorizeRequests().antMatchers("/", "/anon").permitAll()
+        //.and().authorizeRequests().antMatchers("/anon").permitAll()
         // 这里之所以要禁用csrf，是为了方便。
         // 否则，退出链接必须要发送一个post请求，请求还得带csrf token
         // 那样我还得写一个界面，发送post请求
@@ -22,6 +22,6 @@ public class Oauth2ClientSecurity extends WebSecurityConfigurerAdapter {
         // 退出的URL是/logout
         .logout().logoutUrl("/logout").permitAll()
         // 退出成功后，跳转到/路径。
-        .logoutSuccessUrl("/");
+        .logoutSuccessUrl("/anon").permitAll();
     }
 }
