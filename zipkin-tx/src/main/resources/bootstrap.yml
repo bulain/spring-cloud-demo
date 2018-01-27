@@ -1,15 +1,10 @@
 spring:
   application:
-    name: zipkin-gateway
+    name: zipkin-tx
   cloud:
     discovery:
       enabled: true
       serviceId: config-server
-zuul:
-  routes:
-    tx:
-      path: /tx/**
-      serviceId: zipkin-tx
 eureka:
   client:
     serviceUrl:

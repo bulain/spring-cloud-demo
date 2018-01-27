@@ -4,10 +4,10 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(value = "zipkin-gateway")
-public interface ZipkinClientService {
+@FeignClient(value = "zipkin-order")
+public interface ZipkinOrderService {
 
-    @RequestMapping(value = "zipkin/user", method = RequestMethod.GET)
-    String user();
+    @RequestMapping(value = "order/sales", method = RequestMethod.GET)
+    String sales();
 
 }

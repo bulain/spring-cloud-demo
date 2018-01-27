@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class ZipkinServiceApplication {
+public class ZipkinOrderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZipkinServiceApplication.class, args);
+        SpringApplication.run(ZipkinOrderApplication.class, args);
     }
 
 }
