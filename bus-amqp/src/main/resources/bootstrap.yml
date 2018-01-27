@@ -11,8 +11,15 @@ spring:
     username: guest
     password: guest
 management:
+  context-path: /admin
   security:
     enabled: false
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+  shutdown:
+    enabled: true
 eureka:
   client:
     serviceUrl:
