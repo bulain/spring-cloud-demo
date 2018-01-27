@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git: 
-          uri: https://github.com/bulain/cloud-config-repo.git
+          uri: file://C:/home/project/java/cloud-config-repo
 eureka:
   client:
     serviceUrl:
