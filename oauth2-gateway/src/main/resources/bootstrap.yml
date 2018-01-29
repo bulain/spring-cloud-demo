@@ -1,0 +1,30 @@
+server:
+  port: 8783
+spring:
+  application:
+    name: oauth2-gateway
+management:
+  security:
+    enabled: false
+security:
+  oauth2:
+    sso:
+      loginPath: /login
+    client:
+      clientId: 82195310540a9fe434963b1f701a9710
+      clientSecret: d9916f527f2e3bc7273410ab45b4d6795f5d1d39
+      userAuthorizationUri: http://localhost:8778/oauth/authorize
+      accessTokenUri: http://localhost:8778/oauth/token
+    resource:
+      userInfoUri: http://localhost:8781/api/user
+      preferTokenInfo: false
+zuul:
+  routes:
+    api:
+      path: /api/**
+      serviceId: oauth2-resource
+      stripPrefix: false
+
+logging.level.org.springframework.web: DEBUG
+logging.level.org.springframework.security: DEBUG
+    
