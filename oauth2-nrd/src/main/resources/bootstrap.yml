@@ -7,8 +7,6 @@ management:
   security:
     enabled: false
 security:
-  ignored: /
-  sessions: never
   oauth2:
     sso:
       loginPath: /login

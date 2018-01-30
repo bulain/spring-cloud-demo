@@ -13,6 +13,11 @@ public class Oauth2NrdController {
     public Principal user(Principal user) {
         return user;
     }
+    
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
 
     @GetMapping("/welcome")
     public String welcome() {
