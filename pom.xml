@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.bulain</groupId>
+    <artifactId>spring-cloud-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <modules>
+        <module>bus-amqp</module>
+        <module>bus-kafka</module>
+        <module>config-client</module>
+        <module>config-server</module>
+        <module>consul-server</module>
+        <module>eureka-server</module>
+        <module>eureka-service</module>
+        <module>feign-client</module>
+        <module>hystrix-client</module>
+        <module>oauth2-authz</module>
+        <module>oauth2-client</module>
+        <module>oauth2-gateway</module>
+        <module>oauth2-nrd</module>
+        <module>oauth2-resource</module>
+        <module>ribbon-client</module>
+        <module>stream-kafka</module>
+        <module>stream-rabbit</module>
+        <module>task-batch</module>
+        <module>task-runner</module>
+        <module>task-stream</module>
+        <module>zipkin-gateway</module>
+        <module>zipkin-inv</module>
+        <module>zipkin-order</module>
+        <module>zipkin-server</module>
+        <module>zipkin-tx</module>
+        <module>zuul-service</module>
+    </modules>
+
+</project>
