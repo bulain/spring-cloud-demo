@@ -1,3 +1,5 @@
+server:
+  port: 8765
 spring:
   application:
     name: hystrix-client
@@ -5,7 +7,15 @@ spring:
     discovery:
       enabled: true
       serviceId: config-server
+feign:
+  hystrix:
+    enabled: true
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
