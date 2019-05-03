@@ -14,12 +14,12 @@ management:
   context-path: /admin
   security:
     enabled: false
-endpoints:
-  health:
-    sensitive: false
-    enabled: true
-  shutdown:
-    enabled: true
+  endpoints:
+    health:
+      sensitive: false
+      enabled: true
+    shutdown:
+      enabled: truee
 eureka:
   client:
     serviceUrl:
