@@ -8,6 +8,16 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        healthCheckPath: ${management.contextPath}/health
+        healthCheckPath: ${management.context-path}/health
         healthCheckInterval: 15s
-        instance-id: consul-server
+        #instance-id: consul-server
+management:
+  contextPath: /actuator
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+      health:
+        show-details: always
+        
