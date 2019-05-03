@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @EnableAutoConfiguration
-public class EureKaServiceCtrl {
+public class EurekaServiceCtrl {
 
 	@Value("${server.port}")
 	String port;
