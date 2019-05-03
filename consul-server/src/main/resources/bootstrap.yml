@@ -10,14 +10,19 @@ spring:
       discovery:
         healthCheckPath: ${management.context-path}/health
         healthCheckInterval: 15s
-        #instance-id: consul-server
+      config:
+        enabled: true
+        format: YAML
+        watch:
+          enabled: true
+        prefix: consul-config
 management:
-  contextPath: /actuator
+  context-path: /admin
   endpoints:
     web:
+      base-path: /admin
       exposure:
-        include: '*'
-  endpoint:
-      health:
-        show-details: always
+        include: health
+  security:
+    enabled: false
         
