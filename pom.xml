@@ -18,10 +18,12 @@
         <module>config-client</module>
         <module>config-server</module>
         <module>consul-server</module>
+        <module>consul-service</module>
         <module>eureka-server</module>
         <module>eureka-service</module>
         <module>feign-client</module>
         <module>hystrix-client</module>
+        <module>hystrix-dashboard</module>
         <module>oauth2-authz</module>
         <module>oauth2-client</module>
         <module>oauth2-gateway</module>
@@ -33,6 +35,7 @@
         <module>task-batch</module>
         <module>task-runner</module>
         <module>task-stream</module>
+        <module>turbine-server</module>
         <module>zipkin-gateway</module>
         <module>zipkin-inv</module>
         <module>zipkin-order</module>
