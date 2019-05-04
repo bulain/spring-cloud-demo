@@ -3,12 +3,12 @@ package com.bulain.main;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @EnableOAuth2Sso
 @EnableZuulProxy
-@EnableEurekaClient
+@EnableDiscoveryClient
 @SpringBootApplication
 public class Oauth2GatewayApplication {
 

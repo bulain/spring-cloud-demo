@@ -12,7 +12,3 @@ spring:
            defaultBrokerPort: 9092
            zkNodes: localhost
            defaultZkPort: 2181
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/

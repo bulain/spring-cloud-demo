@@ -17,5 +17,5 @@ management:
   security:
     enabled: false
     
-logging.level.org.springframework.web: DEBUG
-logging.level.org.springframework.security: DEBUG
+logging.level.org.springframework.web: INFO
+logging.level.org.springframework.security: INFO

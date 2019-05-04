@@ -4,11 +4,6 @@ spring:
   application:
     name: consul-service
   cloud:
-    consul:
-      host: localhost
-      port: 8500
-      config:
-        enabled: true
-        format: YAML
-        watch:
-          enabled: true
+    discovery:
+      enabled: true
+      serviceId: config-server

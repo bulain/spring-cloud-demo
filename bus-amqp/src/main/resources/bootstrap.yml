@@ -20,7 +20,3 @@ management:
       enabled: true
     shutdown:
       enabled: truee
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/

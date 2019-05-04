@@ -10,7 +10,3 @@ zuul:
     tx:
       path: /tx/**
       serviceId: zipkin-tx
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
