@@ -11,8 +11,7 @@ import com.netflix.zuul.context.RequestContext;
 
 @Component
 public class ZuulServiceFilter extends ZuulFilter {
-
-	private static Logger log = LoggerFactory.getLogger(ZuulServiceFilter.class);
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Override
 	public String filterType() {
@@ -33,11 +32,11 @@ public class ZuulServiceFilter extends ZuulFilter {
 	public Object run() {
 		RequestContext ctx = RequestContext.getCurrentContext();
 		HttpServletRequest request = ctx.getRequest();
-		log.info(String.format("%s >>> %s", request.getMethod(), request
+		logger.info(String.format("%s >>> %s", request.getMethod(), request
 				.getRequestURL().toString()));
 		Object accessToken = request.getParameter("token");
 		if (accessToken == null) {
-			log.warn("token is empty");
+			logger.warn("token is empty");
 			ctx.setSendZuulResponse(false);
 			ctx.setResponseStatusCode(401);
 			try {
@@ -47,7 +46,7 @@ public class ZuulServiceFilter extends ZuulFilter {
 
 			return null;
 		}
-		log.info("ok");
+		logger.info("ok");
 		return null;
 	}
 
