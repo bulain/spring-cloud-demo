@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "repos" : [{
+    "name" : "cloud-config-repo",
+    "url" : "https://github.com/bulain/cloud-config-repo.git",
+    "branches" : ["master"],
+    "hooks": [{
+      "type" : "github",
+      "interval" : "1"
+    }]
+  }]
+}
