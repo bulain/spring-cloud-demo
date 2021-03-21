@@ -10,9 +10,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>8</java.version>
     </properties>
 
     <modules>
+        <module>alibaba-service</module>
         <module>bus-amqp</module>
         <module>bus-kafka</module>
         <module>config-client</module>
@@ -24,6 +26,7 @@
         <module>feign-client</module>
         <module>hystrix-client</module>
         <module>hystrix-dashboard</module>
+        <module>nacos-service</module>
         <module>oauth2-authz</module>
         <module>oauth2-client</module>
         <module>oauth2-gateway</module>
@@ -42,6 +45,40 @@
         <module>zipkin-server</module>
         <module>zipkin-tx</module>
         <module>zuul-service</module>
+        
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.13.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR10</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>aliyun-spring-boot-dependencies</artifactId>
+                <version>1.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
