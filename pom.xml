@@ -24,6 +24,7 @@
         <module>feign-client</module>
         <module>hystrix-client</module>
         <module>hystrix-dashboard</module>
+        <module>nacos-service</module>
         <module>oauth2-authz</module>
         <module>oauth2-client</module>
         <module>oauth2-gateway</module>
