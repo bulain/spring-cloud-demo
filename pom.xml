@@ -18,6 +18,7 @@
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
         <rocketmq-spring-boot.version>2.2.0</rocketmq-spring-boot.version>
+        <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
         <spotify-docker.version>1.2.2</spotify-docker.version>
     </properties>
 
@@ -90,6 +91,11 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>${rocketmq-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata-spring-boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
