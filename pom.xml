@@ -19,6 +19,7 @@
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
         <rocketmq-spring-boot.version>2.2.0</rocketmq-spring-boot.version>
         <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
+        <mybatis-plus-boot.version>3.4.3</mybatis-plus-boot.version>
         <spotify-docker.version>1.2.2</spotify-docker.version>
     </properties>
 
@@ -96,6 +97,11 @@
                 <groupId>io.seata</groupId>
                 <artifactId>seata-spring-boot-starter</artifactId>
                 <version>${seata-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

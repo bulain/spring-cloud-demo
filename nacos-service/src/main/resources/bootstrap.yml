@@ -3,6 +3,17 @@ server:
 spring:
   application:
     name: nacos-service
+  datasource:
+    db1:
+      jdbc-url: jdbc:mysql://localhost:3306/db1
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root      
+    db2:
+      jdbc-url: jdbc:mysql://localhost:3306/db2
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
   cloud:
     nacos:
       config:
@@ -37,6 +48,17 @@ seata:
     nacos:
       server-addr: 127.0.0.1:8848
       namespace: 7b7abc5b-d2b3-4966-90ef-c0e2fd32a0bf
+mybatis-plus:
+  mapper-locations: classpath:mybatis/xml/*.xml
+  typeAliasesPackage: com.bulain.main.pojo
+  global-config:
+    id-type: 3
+    field-strategy: 2
+    db-column-underline: true
+    capital-mode: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
 management:
   endpoints:
     web:
