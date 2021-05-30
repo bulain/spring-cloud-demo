@@ -17,8 +17,8 @@
         <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
-        <rocketmq.version>2.2.0</rocketmq.version>
-        <spotify.version>1.2.2</spotify.version>
+        <rocketmq-spring-boot.version>2.2.0</rocketmq-spring-boot.version>
+        <spotify-docker.version>1.2.2</spotify-docker.version>
     </properties>
 
     <modules>
@@ -86,11 +86,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
-                <version>${rocketmq.version}</version>
+                <version>${rocketmq-spring-boot.version}</version>
             </dependency>
+            -->
         </dependencies>
     </dependencyManagement>
 
@@ -105,7 +107,7 @@
                 <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>${spotify.version}</version>
+                    <version>${spotify-docker.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
