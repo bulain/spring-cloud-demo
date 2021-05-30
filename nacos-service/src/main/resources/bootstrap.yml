@@ -19,16 +19,11 @@ spring:
             server-addr: localhost:8848
             data-id: nacos-service-sentinel
             rule-type: flow
-    stream:
-      rocketmq:
-        binder:
-          name-server: 127.0.0.1:9876
-      bindings:
-        input:
-          destination: cloud-topic
-          group: cloud-group
-        output:
-          destination: cloud-topic
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: cloud-group
+    send-message-timeout: 3000
 management:
   endpoints:
     web:

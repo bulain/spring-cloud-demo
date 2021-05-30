@@ -1,10 +1,8 @@
 package com.bulain.main;
 
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.cloud.stream.messaging.Source;
-import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,15 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class StreamRocketCtrl {
 
-	@Autowired
-	@Qualifier(Source.OUTPUT)
-	MessageChannel output;
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
 
-	@RequestMapping("/send")
-	public String send() {
-		output.send(MessageBuilder.withPayload("This is a demo message")
-				.build());
-		return "success send message";
-	}
+    @RequestMapping("/send")
+    public void send() {
+        String msgBody = "This is a demo message";
+        rocketMQTemplate.send("cloud-topic", MessageBuilder.withPayload(msgBody).build());
+    }
 
 }
