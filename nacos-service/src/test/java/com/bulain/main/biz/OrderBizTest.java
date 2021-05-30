@@ -15,7 +15,7 @@ public class OrderBizTest {
     private OrderBiz orderBiz;
 
     @Test
-    public void save() {
+    public void testSave() {
 
         Order order = new Order();
         order.setName("test");
