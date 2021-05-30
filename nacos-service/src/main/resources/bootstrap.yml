@@ -10,4 +10,17 @@ spring:
         file-extension: yml
       discovery:
         server-addr: 127.0.0.1:8848
-        
+    sentinel:
+      transport:
+        dashboard: localhost:9000
+      datasource:
+        ds:
+          nacos:
+            server-addr: localhost:8848
+            data-id: nacos-service-sentinel
+            rule-type: flow
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
