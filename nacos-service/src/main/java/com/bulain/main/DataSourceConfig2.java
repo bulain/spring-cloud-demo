@@ -15,7 +15,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.bulain.main.db2.mapper", sqlSessionFactoryRef = "db2SqlSessionFactory", sqlSessionTemplateRef = "db2SqlSessionTemplate")
+@MapperScan(basePackages = "com.bulain.main.db2.mapper", sqlSessionTemplateRef = "db2SqlSessionTemplate")
 public class DataSourceConfig2 {
 
     @Bean("db2DataSource")
