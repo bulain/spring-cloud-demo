@@ -13,6 +13,7 @@
     </properties>
 
     <modules>
+        <module>apollo-client</module>
         <module>bus-amqp</module>
         <module>bus-kafka</module>
         <module>config-client</module>
