@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bulain.cloud</groupId>
@@ -12,45 +13,20 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <spring-boot.version>2.3.10.RELEASE</spring-boot.version>
-        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot.version>2.5.5</spring-boot.version>
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
+        <rocketmq-spring-boot.version>2.2.1</rocketmq-spring-boot.version>
+        <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
+        <mybatis-plus-boot.version>3.4.3.4</mybatis-plus-boot.version>
+        <spotify-docker.version>1.2.2</spotify-docker.version>
     </properties>
 
     <modules>
         <module>alibaba-service</module>
-        <module>bus-amqp</module>
-        <module>bus-kafka</module>
-        <module>config-client</module>
-        <module>config-server</module>
-        <module>consul-server</module>
-        <module>consul-service</module>
-        <module>eureka-server</module>
-        <module>eureka-service</module>
-        <module>feign-client</module>
-        <module>hystrix-client</module>
-        <module>hystrix-dashboard</module>
+        <module>apollo-client</module>
         <module>nacos-service</module>
-        <module>oauth2-authz</module>
-        <module>oauth2-client</module>
-        <module>oauth2-gateway</module>
-        <module>oauth2-nrd</module>
-        <module>oauth2-resource</module>
-        <module>ribbon-client</module>
-        <module>stream-kafka</module>
-        <module>stream-rabbit</module>
-        <module>task-batch</module>
-        <module>task-runner</module>
-        <module>task-stream</module>
-        <module>turbine-server</module>
-        <module>zipkin-gateway</module>
-        <module>zipkin-inv</module>
-        <module>zipkin-order</module>
-        <module>zipkin-server</module>
-        <module>zipkin-tx</module>
-        <module>zuul-service</module>
-        
     </modules>
 
     <dependencyManagement>
@@ -83,7 +59,39 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${spotify-docker.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
