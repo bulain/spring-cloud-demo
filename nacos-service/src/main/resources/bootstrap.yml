@@ -52,10 +52,10 @@ mybatis-plus:
   mapper-locations: classpath:mybatis/xml/*.xml
   typeAliasesPackage: com.bulain.main.pojo
   global-config:
-    id-type: 3
-    field-strategy: 2
-    db-column-underline: true
-    capital-mode: true
+    banner: true
+    db-config:
+      id-type: assign_id
+      capital-mode: false
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: true
