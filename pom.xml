@@ -13,13 +13,13 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <spring-boot.version>2.3.10.RELEASE</spring-boot.version>
-        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
-        <rocketmq-spring-boot.version>2.2.0</rocketmq-spring-boot.version>
+        <rocketmq-spring-boot.version>2.2.1</rocketmq-spring-boot.version>
         <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
-        <mybatis-plus-boot.version>3.4.3</mybatis-plus-boot.version>
+        <mybatis-plus-boot.version>3.4.3.4</mybatis-plus-boot.version>
         <spotify-docker.version>1.2.2</spotify-docker.version>
     </properties>
 
