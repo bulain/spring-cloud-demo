@@ -13,9 +13,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <spring-boot.version>2.5.5</spring-boot.version>
-        <spring-cloud.version>2020.0.4</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot.version>2.6.1</spring-boot.version>
+        <spring-cloud.version>2021.0.0</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
         <rocketmq-spring-boot.version>2.2.1</rocketmq-spring-boot.version>
         <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
