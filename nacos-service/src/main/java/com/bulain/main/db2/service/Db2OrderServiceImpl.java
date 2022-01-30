@@ -52,7 +52,7 @@ public class Db2OrderServiceImpl extends ServiceImpl<Db2OrderMapper, Order> impl
 
     @Override
     @Transactional(rollbackFor = Exception.class, transactionManager = "db2TransactionManager")
-    public boolean removeByIds(Collection<? extends Serializable> idList) {
+    public boolean removeByIds(Collection<?> idList) {
         return super.removeByIds(idList);
     }
 
