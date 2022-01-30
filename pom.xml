@@ -13,13 +13,15 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <spring-boot.version>2.6.1</spring-boot.version>
+        <fastjson.version>1.2.79</fastjson.version>
+        <apollo.version>1.9.2</apollo.version>
+        <spring-boot.version>2.6.3</spring-boot.version>
         <spring-cloud.version>2021.0.0</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
         <aliyun-spring-boot.version>1.0.0</aliyun-spring-boot.version>
         <rocketmq-spring-boot.version>2.2.1</rocketmq-spring-boot.version>
         <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
-        <mybatis-plus-boot.version>3.4.3.4</mybatis-plus-boot.version>
+        <mybatis-plus-boot.version>3.5.1</mybatis-plus-boot.version>
         <spotify-docker.version>1.2.2</spotify-docker.version>
     </properties>
 
@@ -31,6 +33,16 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
