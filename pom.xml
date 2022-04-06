@@ -17,7 +17,7 @@
         <fastjson.version>1.2.79</fastjson.version>
         <apollo.version>1.9.2</apollo.version>
         <caffeine.version>2.9.3</caffeine.version>
-        <spring-boot.version>2.6.4</spring-boot.version>
+        <spring-boot.version>2.6.6</spring-boot.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
         <rocketmq-spring-boot.version>2.2.1</rocketmq-spring-boot.version>

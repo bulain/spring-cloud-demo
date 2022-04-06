@@ -10,7 +10,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = NacosServiceApplication.class)
-public class OrderBizTest {
+public class OrderBizDemo {
     @Autowired
     private OrderBiz orderBiz;
 
