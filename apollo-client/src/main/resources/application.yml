@@ -1,0 +1,13 @@
+app:
+  id: apollo-client
+apollo:
+  meta: http://127.0.0.1:8080
+  bootstrap:
+    namespaces: application.yml
+    enabled: true
+    eagerLoad:
+      enabled: true
+  property:
+    names:
+      cache:
+        enable: true
