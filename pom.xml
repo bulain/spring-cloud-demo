@@ -14,14 +14,14 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
-        <fastjson.version>1.2.79</fastjson.version>
-        <apollo.version>1.9.2</apollo.version>
-        <caffeine.version>2.9.3</caffeine.version>
-        <spring-boot.version>2.6.6</spring-boot.version>
-        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <apollo.version>2.0.0</apollo.version>
+        <caffeine.version>3.1.0</caffeine.version>
+        <spring-boot.version>2.6.8</spring-boot.version>
+        <spring-cloud.version>2021.0.2</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
-        <rocketmq-spring-boot.version>2.2.1</rocketmq-spring-boot.version>
-        <seata-spring-boot.version>1.4.2</seata-spring-boot.version>
+        <rocketmq-spring-boot.version>2.2.2</rocketmq-spring-boot.version>
+        <seata-spring-boot.version>1.5.1</seata-spring-boot.version>
         <mybatis-plus-boot.version>3.5.1</mybatis-plus-boot.version>
 
         <spotify-docker.version>1.2.2</spotify-docker.version>
