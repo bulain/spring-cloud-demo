@@ -14,18 +14,19 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
-        <fastjson.version>1.2.83</fastjson.version>
-        <apollo.version>2.0.0</apollo.version>
-        <caffeine.version>3.1.0</caffeine.version>
-        <spring-boot.version>2.6.8</spring-boot.version>
-        <spring-cloud.version>2021.0.2</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
+        <fastjson.version>2.0.21</fastjson.version>
+        <apollo.version>2.0.1</apollo.version>
+        <caffeine.version>3.1.2</caffeine.version>
+        <spring-boot.version>2.7.5</spring-boot.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
         <rocketmq-spring-boot.version>2.2.2</rocketmq-spring-boot.version>
-        <seata-spring-boot.version>1.5.1</seata-spring-boot.version>
+        <seata-spring-boot.version>1.5.2</seata-spring-boot.version>
         <mybatis-plus-boot.version>3.5.1</mybatis-plus-boot.version>
+        <jasypt-spring-boot.version>3.0.4</jasypt-spring-boot.version>
 
         <spotify-docker.version>1.2.2</spotify-docker.version>
-        <fabric8-docker.version>0.39.1</fabric8-docker.version>
+        <fabric8-docker.version>0.40.2</fabric8-docker.version>
     </properties>
 
     <modules>
@@ -39,53 +40,58 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <version>2.0.21</version>
             </dependency>
             <dependency>
                 <groupId>com.ctrip.framework.apollo</groupId>
                 <artifactId>apollo-client</artifactId>
-                <version>${apollo.version}</version>
+                <version>2.0.1</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
+                <version>2.7.5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>2021.0.5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
+                <version>2021.0.4.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
-                <version>${rocketmq-spring-boot.version}</version>
+                <version>2.2.2</version>
             </dependency>
             <dependency>
                 <groupId>io.seata</groupId>
                 <artifactId>seata-spring-boot-starter</artifactId>
-                <version>${seata-spring-boot.version}</version>
+                <version>1.5.2</version>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus-boot.version}</version>
+                <version>3.5.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>3.0.4</version>
             </dependency>
             <dependency>
                 <groupId>com.github.ben-manes.caffeine</groupId>
                 <artifactId>caffeine</artifactId>
-                <version>${caffeine.version}</version>
+                <version>3.1.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -96,17 +102,17 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot.version}</version>
+                    <version>2.7.5</version>
                 </plugin>
                 <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>${spotify-docker.version}</version>
+                    <version>1.2.2</version>
                 </plugin>
                 <plugin>
                     <groupId>io.fabric8</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>${fabric8-docker.version}</version>
+                    <version>0.40.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
