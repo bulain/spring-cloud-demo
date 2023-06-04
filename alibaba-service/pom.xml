@@ -33,6 +33,10 @@
                     <groupId>com.alibaba</groupId>
                     <artifactId>druid</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.apache.dubbo</groupId>
+                    <artifactId>dubbo</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
