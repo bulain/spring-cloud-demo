@@ -1,0 +1,19 @@
+server:
+  port: 8081
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    access-key: rocketmq2
+    secret-key: 12345678
+    group: springBootGroup
+    send-message-timeout: 30000
+  consumer:
+    access-key: rocketmq2
+    secret-key: 12345678
+
+logging:
+  level:
+    root: WARN
+    org.springframework: INFO
+    org.apache.rocketmq: WARN
+    com.bulain: DEBUG
