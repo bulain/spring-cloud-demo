@@ -82,12 +82,6 @@ public class Db2OrderServiceImpl extends ServiceImpl<Db2OrderMapper, Order> impl
 
     @Override
     @Transactional(rollbackFor = Exception.class, transactionManager = "db2TransactionManager")
-    public boolean saveOrUpdate(Order entity, Wrapper<Order> updateWrapper) {
-        return super.saveOrUpdate(entity, updateWrapper);
-    }
-
-    @Override
-    @Transactional(rollbackFor = Exception.class, transactionManager = "db2TransactionManager")
     public boolean saveBatch(Collection<Order> entityList, int batchSize) {
         return super.saveBatch(entityList, batchSize);
     }
